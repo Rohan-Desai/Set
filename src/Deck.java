@@ -22,12 +22,8 @@ public class Deck {
 		
 		int count = 0;
 		for(Card card : cards) {
-			
-			System.out.println("" + card.number + " " + card.shape + " " + card.color + " " + card.shade);
 			count++;
 		}
-		String tempStore = cards.get(1).shape;
-		System.out.println(tempStore);
 	}	
 	
 	
