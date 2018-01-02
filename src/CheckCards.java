@@ -9,7 +9,7 @@ public class CheckCards extends Deck {
 			int tempStoreNum = cards.get(i).number;
 			String tempStoreShade = cards.get(i).shade;
 			String tempStoreColor = cards.get(i).color;
-			System.out.println(tempStoreShape + " " + tempStoreNum + " " + tempStoreShade + " " + tempStoreColor);
+			System.out.println(tempStoreShape + ", " + tempStoreNum + ", " + tempStoreShade + ", " + tempStoreColor);
 			
 		}
 		Scanner input1 = new Scanner(System.in);
@@ -22,25 +22,28 @@ public class CheckCards extends Deck {
 		String x = Check1;
 		String y = Check2;
 		String z = Check3;
-		System.out.println(x + " " + y + " " + z); 
 		
-		if(x == y) {
-			if (y == z) {
+		String[] check1 = x.split(",");
+		String[] check2 = y.split(",");
+		String[] check3 = z.split(",");
+		for(int j = 0; j<4; j++) { 
+
+		}
+		boolean set = true;
+		for(int i = 0; i<4; i++) {
+			if(check1[i].equals(check2[i]) && check1[i].equals(check3[i]) || !check1[i].equals(check2[i]) && !check1[i].equals(check3[i]) && !check2[i].equals(check3[i])) {
 				
-				System.out.println("SET!");
 				
-			}
+				
+				}else {
+					
+					set = false;
+					
+				}
+		}
+		if(set) {
 			
-		}else if(x != y) {
-			if(y != z) {
-				
-				System.out.println("SET!");
-				
-			}	
-			
-		}else {
-			
-			System.out.println("Try Again");
+			System.out.println("SET!");
 			
 		}
 	}
